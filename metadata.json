@@ -1,0 +1,5 @@
+{
+  "name": "RPG Inventory System",
+  "description": "A mobile RPG inventory interface with a main inventory and dedicated slots for weapons and armor. Items can be equipped and unequipped with a double tap.",
+  "requestFramePermissions": []
+}

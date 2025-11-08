@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPG Inventory System</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+      }
+      @keyframes attack-anim {
+        50% { transform: scale(1.2); filter: brightness(1.5); }
+      }
+      @keyframes shake-anim {
+        10%, 90% { transform: translate3d(-1px, 0, 0); }
+        20%, 80% { transform: translate3d(2px, 0, 0); }
+        30%, 50%, 70% { transform: translate3d(-3px, 0, 0); }
+        40%, 60% { transform: translate3d(3px, 0, 0); }
+      }
+      .animate-attack { animation: attack-anim 0.4s ease-in-out; }
+      .animate-defend { animation: shake-anim 0.4s cubic-bezier(.36,.07,.19,.97) both; }
+      
+      @keyframes pulse-fade {
+        0% { opacity: 1; transform: scale(1.05); filter: drop-shadow(0 0 8px rgba(255, 255, 100, 0.8)); }
+        50% { opacity: 0.7; transform: scale(1); filter: drop-shadow(0 0 4px rgba(255, 255, 100, 0.5)); }
+        100% { opacity: 1; transform: scale(1.05); filter: drop-shadow(0 0 8px rgba(255, 255, 100, 0.8)); }
+      }
+      .item-pulse {
+        animation: pulse-fade var(--pulse-duration, 2s) infinite ease-in-out;
+      }
+
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "vite": "https://aistudiocdn.com/vite@^7.2.2",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-900 text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
